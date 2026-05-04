@@ -5,10 +5,10 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: vedantmgoyal2009/winget-releaser@v2
         with:
           identifier: Rclone.Rclone
-          installers-regex: '-windows-\w+\.zip$'
+          installers-regex: -windows-\w+\.zip$
           token: ${{ secrets.WINGET_TOKEN }}
